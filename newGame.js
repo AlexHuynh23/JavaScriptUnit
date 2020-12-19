@@ -32,10 +32,10 @@ document.addEventListener("keyup", keyUnpressed, false);
 function keyPressed(e) {
   /*
   */
-    if (e.key == "Right" || e.key == "ArrowRight") {
+    if (e.keyCode == "68") {
         rightPressed = true;
     }
-    else if (e.key == "Left" || e.key == "ArrowLeft") {
+    else if (e.keyCode == "65") {
         leftPressed = true;
     }
     else if (e.keyCode == 32){
@@ -50,10 +50,10 @@ function keyPressed(e) {
 function keyUnpressed(e) {
   /*
   */
-    if (e.key == "Right" || e.key == "ArrowRight") {
+    if (e.keyCode == "68") {
         rightPressed = false;
     }
-    else if (e.key == "Left" || e.key == "ArrowLeft") {
+    else if (e.keyCode == "65") {
         leftPressed = false;
     }
 }
