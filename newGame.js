@@ -4,7 +4,7 @@ var ballRadius = 10;
 var ballStatus = 0;
 var x = canvas.width / 2;
 var y = canvas.height - 30;
-var velocityY = -2;  
+var velocityY = -4;
 var paddleHeight = 15;
 var paddleWidth = 100;
 var paddleX = (canvas.width - paddleWidth) / 2;
@@ -40,7 +40,7 @@ function keyPressed(e) {
     }
     else if (e.keyCode == 32){
       ballStatus = 1;
-      x = canvas.width / 2;
+      x = paddleX + (paddleWidth / 2);
       y = canvas.height - 30;
     }
 }
@@ -130,27 +130,9 @@ function draw() {
 
     drawPaddle();
     collisionDetection();
-    if (ballStatus = 1){
+    if (ballStatus == 1){
       drawBall();
-    }
-
-    if (x + velocityX > canvas.width - ballRadius || x + velocityX < ballRadius) {
-        velocityX = -velocityX;
-    }
-    if (y + velocityY < ballRadius) {
-        velocityY = -velocityY;
-    }
-    else if (y + velocityY > canvas.height - ballRadius) {
-        if (x > paddleX && x < paddleX + paddleWidth) {
-            if (y = y - paddleHeight) {
-                velocityY = -velocityY;
-            }
-        }
-        else {
-            alert("YOU LOST");
-            document.location.reload();
-            clearInterval(interval); // Needed for Chrome to end game
-        }
+      y += velocityY;
     }
 
     if (rightPressed && paddleX < canvas.width - paddleWidth) {
@@ -160,8 +142,8 @@ function draw() {
         paddleX -= 7;
     }
 
-    x += velocityX;
-    y += velocityY;
+
+
 }
 
 var interval = setInterval(draw, 10);
