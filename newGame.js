@@ -1,6 +1,6 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-var ballRadius = 10;
+var ballRadius = 6;
 var ballStatus = 0;
 var x = canvas.width / 2;
 var y = canvas.height - 30;
@@ -10,11 +10,11 @@ var paddleWidth = 100;
 var paddleX = (canvas.width - paddleWidth) / 2;
 var rightPressed = false;
 var leftPressed = false;
-var brickWidth = 75;
+var brickWidth = 45;
 var brickHeight = 20;
-var brickRowCount = 4;//Change this number lower or higher to adjust difficulty
-var brickColumnCount = Math.floor(canvas.width/brickWidth) - 1;
-var brickPadding = 10;
+var brickRowCount = 5;//Change this number lower or higher to adjust difficulty
+var brickColumnCount = Math.floor(canvas.width/brickWidth) - 2;
+var brickPadding = 5;
 var brickOffsetVertical = 30;
 var brickOffsetHorizontal = 25;
 
