@@ -4,8 +4,7 @@ var ballRadius = 10;
 var ballStatus = 0;
 var x = canvas.width / 2;
 var y = canvas.height - 30;
-var velocityX = 2;    //Change this number lower or higher to adjust difficulty
-var velocityY = -2;   //Change this number lower or higher to adjust difficulty
+var velocityY = -2;  
 var paddleHeight = 15;
 var paddleWidth = 100;
 var paddleX = (canvas.width - paddleWidth) / 2;
@@ -69,7 +68,6 @@ function collisionDetection() {
             var b = bricks[i][j];
             if (b.status == 1) {
                 if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
-                    velocityY = -velocityY;
                     b.status = 0;
                     ballStatus = 0;
                 }
@@ -132,7 +130,7 @@ function draw() {
 
     drawPaddle();
     collisionDetection();
-    if (ballStaus = 1){
+    if (ballStatus = 1){
       drawBall();
     }
 
