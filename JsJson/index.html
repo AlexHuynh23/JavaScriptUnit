@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>More Javascript</title>
+    <meta charset="utf-8"></meta>
+    <script defer src="myScript.js"></script>
+    <style>
+    #myDiv, button {
+      font-size: 150%;
+    }
+    input {
+      font-size: 125%;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv">
+      <p>
+        <!-- Each label must be matched to an input -->
+        <label for='username'>Username:</label>
+        <!-- Good practice: give same name and id for every input -->
+        <input id='username' name='username' type='text' />
+        <br />
+        <label for='password'>Password:</label>
+        <input id='password' name='password' type='text' />
+
+        <h3>Email Provider</h3>
+
+        <input type="radio" id="Gmail" name="pet" value="Gmail">
+        <label for="Gmail">Gmail</label><br />
+        <input type="radio" id="Yahoo" name="pet" value="Yahoo">
+        <label for="Yahoo">Yahoo</label><br />
+        <input type="radio" id="ICloud" name="pet" value="ICloud">
+        <label for="ICloud">ICloud</label><br />
+        <input type="radio" id="Bishops" name="pet" value="Bishops">
+        <label for="Bishops">Bishops</label><br />
+
+      </p>
+      <button onclick='myClick()'>Register Account</button>
+      <button onclick='myClick1()'>Find Accounts</button>
+    </div>
+
+    <div id="result"></div>
+  </body>
+</html>
