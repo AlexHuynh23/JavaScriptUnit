@@ -57,13 +57,13 @@ function myClick () {
 }
 
 function myClick1 () {
-  myDiv.innerHTML = "\n<label for='username'>Search Username:</label><input id='usernameSearch' name='username' type='text' />";
+  myDiv.innerHTML = "\n<div id = 'search'><label for='username'>Search Username:</label><input id='usernameSearch' name='username' type='text' />";
   myDiv.innerHTML += "<button onclick='searchUser()'>Search By UserName</button><br/>";
   myDiv.innerHTML += "<input type='radio' id='Gmail' name='pet' value='Gmail'><label for='Gmail'>Gmail</label><br/>"
   myDiv.innerHTML += '<input type="radio" id="Yahoo" name="pet" value="Yahoo"><label for="Yahoo">Yahoo</label><br />'
   myDiv.innerHTML += '<input type="radio" id="ICloud" name="pet" value="ICloud"><label for="ICloud">ICloud</label><br />'
   myDiv.innerHTML += '<input type="radio" id="Bishops" name="pet" value="Bishops"><label for="Bishops">Bishops</label><br />'
-  myDiv.innerHTML += "<button onclick='searchEmail()'>Search By Email</button><br/>";
+  myDiv.innerHTML += "<button onclick='searchEmail()'>Search By Email</button><br/><div/>";
 
 }
 function searchUser(){
