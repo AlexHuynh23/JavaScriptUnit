@@ -9,8 +9,8 @@ function myClick () {
   var password = document.getElementById('password');
   var Gmail = document.getElementById("Gmail");
   var Yahoo = document.getElementById("Yahoo");
-  var ICloud = document.getElementById("bird");
-  var Bishops = document.getElementById("hamster");
+  var ICloud = document.getElementById("ICloud");
+  var Bishops = document.getElementById("Bishops");
 
   myObj = {
     "username": username,
@@ -41,16 +41,10 @@ function myClick () {
     myJSON['email'] = "n/a";
   }
 
-  if (typeof(Storage) !== "undefined") {
-    // Store
-    myJSON = JSON.stringify(myObj);
-    localStorage.setItem("testJSON", myJSON);
-    // Retrieve
-    var lastname = localStorage.getItem("testJson");
-    document.getElementById("result").innerHTML = testJson.Email;
-  } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-  }
+
+  myJSON = JSON.stringify(myObj);
+  localStorage.setItem("testJSON", myJSON);
+
 
   // Notice here that we are appending the values of the variables.
   myDiv.innerHTML += "\t\t<p>" + myJSON['username'] + "'s email  is: " + myJSON['email'] + "</p>\n";
@@ -66,8 +60,11 @@ function myClick1 () {
   myDiv.innerHTML += "<button onclick='searchEmail()'>Search By Email</button><br/><div/>";
 
 }
-function searchUser(){
 
+function searchUser(){
+  text = localStorage.getItem("testJSON");
+  obj = JSON.parse(text);
+  document.getElementById("demo").innerHTML = obj.name;
 }
 function searchEmail(){
 
