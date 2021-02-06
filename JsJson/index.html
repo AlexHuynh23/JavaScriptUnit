@@ -17,6 +17,7 @@
     <div id="myDiv">
       <p>
         <!-- Each label must be matched to an input -->
+
         <label for='username'>Username:</label>
         <!-- Good practice: give same name and id for every input -->
         <input id='username' name='username' type='text' />
@@ -34,10 +35,15 @@
         <label for="ICloud">ICloud</label><br />
         <input type="radio" id="Bishops" name="pet" value="Bishops">
         <label for="Bishops">Bishops</label><br />
+        <button onclick='myClick()'>Register Account</button><br />
+        <label for='search'>Search Username:</label>
+        <input id='search' name='search' type='text'/>
+        <button onclick='searchUser()'>Search By UserName</button><br/>
+
+
 
       </p>
-      <button onclick='myClick()'>Register Account</button>
-      <button onclick='myClick1()'>Find Accounts</button>
+
     </div>
 
     <div id="result"></div>
